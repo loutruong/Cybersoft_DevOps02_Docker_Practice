@@ -12,7 +12,7 @@ RUN yarn config set network-timeout 3000000
 # Install the application dependencies
 RUN yarn install
 
-# COPY prisma ./prisma/
+COPY prisma ./prisma/
 # RUN yarn prisma generate
 
 COPY . .
