@@ -12,8 +12,8 @@ RUN yarn config set network-timeout 3000000
 # Install the application dependencies
 RUN yarn install
 
-COPY prisma ./prisma/
-RUN yarn prisma generate
+# COPY prisma ./prisma/
+# RUN yarn prisma generate
 
 COPY . .
 # Expose port 8088 to the outside world
