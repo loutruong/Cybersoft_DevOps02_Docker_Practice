@@ -12,14 +12,10 @@ RUN yarn config set network-timeout 3000000
 # Install the application dependencies
 RUN yarn install
 
-# Copy the source code files in same level with Dockerfile to the working directory
+COPY prisma ./prisma/
+RUN yarn prisma generate
+
 COPY . .
-
-# Set the network timeout to a higher value (in milliseconds) to prevent timeouts during installation
-RUN yarn config set network-timeout 3000000
-# Install the application dependencies
-RUN yarn install
-
 # Expose port 8088 to the outside world
 EXPOSE 8088
 
