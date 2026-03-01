@@ -11,3 +11,4 @@ COPY . .
 EXPOSE 80
 
 # docker build . -t loutruonghtml:1.0.0
+# docker run -d -it --name html -p 80:80 loutruonghtml:1.0.0
